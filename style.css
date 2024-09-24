@@ -1,8 +1,15 @@
-p { 
-color: blue; 
-background-color: black; 
-font-size: 18px; 
-padding: 10px; 
-font-family: 'Arial', sans-serif; 
-font-weight: bold;
+h1 {
+    color: rgb(0, 0, 0);
+    font-family: "Prata", system-ui;
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 25px;
 }
