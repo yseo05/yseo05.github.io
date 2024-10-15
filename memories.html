@@ -3,7 +3,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale">
     <link rel="stylesheet" href="style2.css">
-    <title>Seasonal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <title>Memories</title>
 </head>
 
 <body>
@@ -14,15 +17,31 @@
             <li><a href="seasonal.html">SEASONAL</a></li>
             <li><a href="memories.html">MEMORIES</a></li>
             <li><a href="emotions.html">EMOTIONS</a></li>
-            <li><a href="global.html">GLOBAL</a></li>
+            <li><a href="quotes.html">QUOTES</a></li>
         </ul>
     </nav>
 </body>
 
-<p>Perfumes That Evoke Specific Memories:</p>
-/
-    <p>First Love Memories - Sweet & Delicate Perfumes</p>
-        <p>Recommendation: Chloe - "Chloe Eau de Parfum" (Soft Floral Scent)</p>
-/
-    <p>Travel Scents - Remind of specific places visited</p>
-        <p>Recommendation: Diptyque - "Philosykosm" (Fig-scented perfume - Brings memories of warm Mediterranean breezes and shade)</p>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper flap">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <p>Remember your date with first love?
+                            Or memories of travelling different countries and places? 
+                            Like this, scents evoke specific memories of certain places or people.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+</html>
