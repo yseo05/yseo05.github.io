@@ -141,19 +141,19 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-    background-image: url(img/santa.jpg);
+    background-image: url(Images/santa.jpg);
 }
 
 .card[for="c2"] {
-    background-image: url(img/nectarine.png);
+    background-image: url(Images/nectarine.png);
 }
 
 .card[for="c3"] {
-    background-image: url(img/petit.png);
+    background-image: url(Images/petit.png);
 }
 
 .card[for="c4"] {
-    background-image: url(img/rosiee.jpeg);
+    background-image: url(Images/rosiee.jpeg);
 }
 
 .card:hover{
