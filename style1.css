@@ -90,19 +90,19 @@ p{
 }
 
 .card1{
-    background-image: url(img/s.png);
+    background-image: url(Images/s.png);
 }
 
 .card2{
-    background-image: url(img/s.png);
+    background-image: url(Images/s.png);
 }
 
 .card3{
-    background-image: url(img/f.png);
+    background-image: url(Images/f.png);
 }
 
 .card4{
-    background-image: url(img/w.png);
+    background-image: url(Images/w.png);
 }
 
 .card:hover{
