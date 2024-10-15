@@ -5,33 +5,33 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.hero{
+body{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
-    position: relative;
-    padding: 0.5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #000000;
+    background-position: flex;
+    background-size: cover;
 }
 
-nav {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+.navbar{
+    height: 12%;
     padding: 20px 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-nav .logo{
+.logo{
     width: 80px;
+    cursor: pointer;
 }
 
-nav ul li {
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
     list-style: none;
     display: inline-block;
     margin-left: 40px;
@@ -39,123 +39,83 @@ nav ul li {
 
 nav ul li a{
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 18px;
 }
 
-* {
+.row{
+    padding: 20px 8%;
+    display: flex;
+    height: 80%;
+    align-items: center;    
+
+}
+
+.col{
+    flex-basis: 50%;
+}
+
+h1{
+    color: #ffffff;
+    font-family: "Prata", system-ui;
+    font-size: 125px;
+}
+
+p1{
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+p{
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+}
+
+.card{
+    width: 250px;
+    height: 280px;
+    display: inline-flex;
+    border-radius: 20px;
+    padding: 15px 25px;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    background-image: url(img/spring.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-body {
-    background-color: #eeeeea;
-}
-
-.wrapper {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container {
-    height: 600px;
-    width: 800px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
-}
-
-
-.card {
-    width: 80px;
-    border-radius: .75rem;
-    background-size: cover;
     cursor: pointer;
-    overflow: hidden;
-    border-radius: 2rem;
-    margin: 0 10px;
-    display: flex;
-    align-items: flex-end;
-    transition: .6s cubic-bezier(.28, -0,03, 0, .99);
-    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    margin: 15px 25px;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+    box-shadow: 0 0 25px #fff;
 }
 
-.card > .row {
+.card1{
+    background-image: url(img/s.png);
+}
+
+.card2{
+    background-image: url(img/s.png);
+}
+
+.card3{
+    background-image: url(img/f.png);
+}
+
+.card4{
+    background-image: url(img/w.png);
+}
+
+.card:hover{
+    transform: translateY(-10px)
+}
+
+h4{
     color: rgb(0, 0, 0);
-    display: flex;
-    flex-wrap: nowrap;
+    text-decoration: none;
 }
 
-.card > .row > .icon {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    border-radius: 50%;
-    width: 50px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    margin: 15px;
-}
-
-.card > .row > .description {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    height: 80px;
-    width: 520px;
-    opacity: 0;
-    transform: translateY(30px);
-    transform: all .2s ease;
-}
-
-.description p {
-    color: #000000;
-    padding-top: 5px;
-}
-
-.description h4 {
-    text-transform: uppercase;
-}
-
-input {
-    display: none;
-}
-
-input:checked + label {
-    width: 600px;
-}
-
-input:checked + label .description {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-.card[for="c1"] {
-    background-image: url(img/santa.jpg);
-}
-
-.card[for="c2"] {
-    background-image: url(img/nectarine.png);
-}
-
-.card[for="c3"] {
-    background-image: url(img/petit.png);
-}
-
-.card[for="c4"] {
-    background-image: url(img/rosiee.jpeg);
+.card p{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-decoration: none;
 }
