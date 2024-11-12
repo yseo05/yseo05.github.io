@@ -215,3 +215,27 @@ input[type="radio"]{
 #star-5:checked ~ .footer .numb::before {
     content: "Bvlgari - Pour Homme";
 }
+
+.footer1 {
+    height: auto; /* Adjusts height to fit all contents */
+    padding: 20px; /* Adds space around the contents */
+    display: flex;
+    flex-direction: column; /* Aligns content vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center;
+}
+
+.learn-more-button {
+    margin-top: 25px; /* Adds space between the text and button */
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #555;
+}
