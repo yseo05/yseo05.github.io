@@ -40,7 +40,7 @@ nav ul li a{
 }
 
 body {
-    background-image: url(Images/winter.png);
+    background-image: url(img/winter.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -141,19 +141,19 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-    background-image: url(Images/goddess.png);
+    background-image: url(img/goddess.png);
 }
 
 .card[for="c2"] {
-    background-image: url(Images/mag.png);
+    background-image: url(img/mag.png);
 }
 
 .card[for="c3"] {
-    background-image: url(Images/ambre.png);
+    background-image: url(img/ambre.png);
 }
 
 .card[for="c4"] {
-    background-image: url(Images/another.jpg);
+    background-image: url(img/another.jpg);
 }
 
 .card:hover{
