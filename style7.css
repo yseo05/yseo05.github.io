@@ -40,7 +40,7 @@ nav ul li a{
 }
 
 body {
-    background-image: url(Images/fall.png);
+    background-image: url(img/fall.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -141,19 +141,19 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-    background-image: url(Images/biblio.png);
+    background-image: url(img/biblio.png);
 }
 
 .card[for="c2"] {
-    background-image: url(Images/whispers.png);
+    background-image: url(img/whispers.png);
 }
 
 .card[for="c3"] {
-    background-image: url(Images/sacred.png);
+    background-image: url(img/sacred.png);
 }
 
 .card[for="c4"] {
-    background-image: url(Images/oud.png);
+    background-image: url(img/oud.png);
 }
 
 .card:hover{
