@@ -1,11 +1,60 @@
-/* general */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 80px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+}
 body {
     background-color: #E7E7D5;
     color: #23356D;
-    font-family: dupincel-variable, serif;
+    font-family: "Prata", system-ui;
     line-height: 1.35;
     margin: 0 auto;
     overflow-x: hidden;
+}
+
+.title-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+}
+
+.title-container h1 {
+    font-family: "Prata", system-ui;
+    font-size: 150px;
+    position: relative;
+    color: black;
+    z-index: 50;
 }
 
 h4 {
@@ -14,6 +63,8 @@ h4 {
 
 .background-fade {
     position: fixed;
+    display: inline-block;
+    text-decoration: none;
     top: 0;
     left: 0;
     width: 100%;
@@ -31,23 +82,24 @@ h4 {
     }
 }
 
-/* logo/link */
 .logo {
     position: absolute;
     align-items: center;
-    left: 12.7%;
+    left: 10%;
 }
 
 #asterisk {
-    display: flex;
-    position: absolute;
-    align-items: center;
+    display: block;
+    position: fixed;
+    align-items:center;
     width: 12%;
     animation: spin 10s linear infinite;
-    left: 34.3%;
-    top: 24%;
+    top: 15%;
+    left: 45%;
+    transform: translate(-50%, -50%);
     transform-origin: center;
-    z-index: 5000;
+    z-index: 10;
+    cursor: pointer;
 
 }
 
@@ -318,22 +370,4 @@ h4 {
     100% {
         opacity: 1;
     }
-}
-
-/* footer */
-footer {
-    font-size: smaller;
-    text-align: center;
-    color: #23356D;
-    margin-top: -200px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-    bottom: -20px;
-}
-
-.footer-link:hover {
-    font-style: italic;
-    color: #9D141F;
 }
