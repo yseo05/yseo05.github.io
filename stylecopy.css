@@ -5,19 +5,37 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    background-color: rgb(240, 240, 228);
+    color: #23356D;
+    font-family: "Prata", system-ui;
+    line-height: 1.35;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
 nav {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 20px 8%;
+    padding: 50px 5%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* 로고와 바를 양쪽 끝으로 배치 */
+    z-index: 10;
 }
 
-nav .logo{
+nav .logo {
     width: 80px;
+    margin-right: auto; /* 로고를 왼쪽으로 붙임 */
+}
+
+nav ul {
+    display: flex;
+    gap: 15px; /* 링크 간의 간격 설정 */
+    margin-left: auto; /* 네비게이션 바를 오른쪽으로 붙임 */
+    list-style: none;
 }
 
 nav ul li {
@@ -26,18 +44,10 @@ nav ul li {
     margin-left: 40px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: #000000;
     font-size: 18px;
-}
-body {
-    background-color: #E7E7D5;
-    color: #23356D;
-    font-family: "Prata", system-ui;
-    line-height: 1.35;
-    margin: 0 auto;
-    overflow-x: hidden;
 }
 
 .title-container {
@@ -51,7 +61,7 @@ body {
 
 .title-container h1 {
     font-family: "Prata", system-ui;
-    font-size: 150px;
+    font-size: 100px;
     position: relative;
     color: black;
     z-index: 50;
