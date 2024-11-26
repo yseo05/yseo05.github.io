@@ -46,6 +46,7 @@ nav ul li a{
 .content{
     text-align: center;
     position: relative;
+    border: none;
 }
 
 .content h1{
@@ -58,6 +59,7 @@ nav ul li a{
 }
 
 .content h1:hover{
+    text-shadow: none;
     -webkit-text-stroke: 0.5px #fff;
     color: transparent;
 }
@@ -69,13 +71,11 @@ nav ul li a{
     position: relative;
 }
 
-
 .content a{
     text-decoration: none;
     display: inline-block;
     color: #fff;
-    font-size: 24px;
-    border: 2px solid #fff;
+    font-size: 25px;
     padding: 14px 70px;
     border-radius: 50px;
     margin-top: 20px;
