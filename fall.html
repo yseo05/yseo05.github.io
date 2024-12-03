@@ -1,68 +1,212 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale">
-    <link rel="stylesheet" href="style7.css">
-    <title>Fall</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <title>Perfume Showcase</title>
+    <style>
+        nav {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 3;
+        }
 
+        nav .logo {
+            width: 80px;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 40px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 18px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .left-image-container {
+            position: relative;
+            height: 100%;
+            width: auto;
+        }
+
+        .left-image {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 200;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .perfume-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            width: auto;
+            padding-right: 50px;
+            z-index: 2;
+        }
+
+        .perfume {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .perfume img {
+            animation: pulse 2s infinite ease-in-out;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .perfume img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .perfume:hover img {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        .perfume::after {
+            content: attr(data-name);
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: 'Prata', serif;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.4s;
+            pointer-events: none;
+        }
+
+        .perfume:hover::after {
+            opacity: 1;
+        }
+
+        .display-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0 20px;
+        }
+
+        .display-container img {
+            max-width: 100%;
+            max-height: 80%;
+            object-fit: contain;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            display: none;
+        }
+
+        .display-container img.active {
+            display: block;
+        }
+    </style>
+</head>
 <body>
     <nav>
         <img src="img/logo.png" class="logo">
         <ul>
-            <li><a href="copy.html">HOME</a></li>
+            <li><a href="index.html">HOME</a></li>
             <li><a href="seasonal.html">SEASONAL</a></li>
-            <li><a href="memories.html">MEMORIES</a></li>
+            <li><a href="copy.html">MEMORIES</a></li>
             <li><a href="emotions.html">EMOTIONS</a></li>
             <li><a href="quotes.html">QUOTES</a></li>
         </ul>
     </nav>
-</body>
 
-<body>
-    <div class="wrapper">
-        <div class="container">
-            <input type="radio" name="slide" id="c1" checked>
-            <label for="c1" class="card">
-                <div class="row">
-                    <div class="icon">1</div>
-                    <div class="description">
-                        <h4>Byredo</h4>
-                        <p>Bibliothèque</p>
-                    </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c2" checked>
-            <label for="c2" class="card">
-                <div class="row">
-                    <div class="icon">2</div>
-                    <div class="description">
-                        <h4>Maison Margiela</h4>
-                        <p>Whispers in the Library</p>
-                    </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c3" checked>
-            <label for="c3" class="card">
-                <div class="row">
-                    <div class="icon">3</div>
-                    <div class="description">
-                        <h4>Kilian</h4>
-                        <p>Sacred Wood</p>
-                    </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c4" checked>
-            <label for="c4" class="card">
-                <div class="row">
-                    <div class="icon">4</div>
-                    <div class="description">
-                        <h4>Maison Francis Kurkdjian Paris</h4>
-                        <p>OUD satin mood</p>
-                    </div>
-                </div>
-            </label>
+    <div class="left-image-container">
+        <img src="img/3.jpg" alt="Left Decorative" class="left-image">
+        <div class="image-text">Fall</div>
+    </div>
+
+    <div class="display-container">
+        <img id="display-image" src="" alt="Selected Perfume">
+    </div>
+
+    <div class="perfume-container">
+        <div class="perfume" data-image="img/fall01.png">
+            <img src="img/fall1.png" alt="Citrus Delight">
+        </div>
+        <div class="perfume" data-image="img/fall02.png">
+            <img src="img/fall2.png" alt="Floral Elegance">
+        </div>
+        <div class="perfume" data-image="img/fall03.png">
+            <img src="img/fall3.png" alt="Woody Whisper">
+        </div>
+        <div class="perfume" data-image="img/fall04.png">
+            <img src="img/fall4.png" alt="Spicy Passion">
         </div>
     </div>
+
+    <script>
+        const perfumes = document.querySelectorAll('.perfume');
+        const displayImage = document.getElementById('display-image');
+
+        perfumes.forEach(perfume => {
+            perfume.addEventListener('click', () => {
+                const imageUrl = perfume.getAttribute('data-image');
+                displayImage.src = imageUrl;
+                displayImage.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
