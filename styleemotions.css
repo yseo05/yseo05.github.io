@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1; /* 비디오 위에 표시되도록 설정 */
+}
+
+nav .logo{
+    width: 80px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Prata', system-ui;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000; /* 전체 배경색 */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* 넘치는 요소 제거 */
+}
+
+/* 비디오 공통 스타일 */
+.video {
+    flex: 1; /* 비디오 영역 동일 비율로 분할 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 비디오가 화면에 맞게 크기 조정 */
+}
+
+/* 중앙 텍스트 영역 */
+.center-text {
+    flex: 1; /* 중앙 영역 */
+    background-color: rgba(0, 0, 0, 0.8); /* 검정 반투명 배경 */
+    color: #fff; /* 텍스트 흰색 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.center-text h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.center-text p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+.learn-more-button {
+    margin-top: 20px; /* 텍스트와 버튼 사이 간격 */
+    padding: 10px 20px;
+    color: #fff;
+    background-color: transparent;
+    opacity: 0.5;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.25s ease;
+}
+
+.learn-more-button:hover {
+    background-color: transparent;
+} 
