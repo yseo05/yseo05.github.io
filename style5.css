@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif
 }
 
 nav {
@@ -14,6 +14,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
 }
 
 nav .logo{
@@ -32,23 +33,41 @@ nav ul li a{
     font-size: 18px;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
-    background-image: url(img/spring.png);
+    background-color: #000000;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
 }
 
-body {
-    background-color: #eeeeea;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* 투명한 배경 추가 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* 기본적으로 숨김 */
+    transition: opacity 0.4s ease; /* 호버 시 부드럽게 나타남 */
+    border-radius: inherit; /* 카드의 모서리와 동일하게 적용 */
+}
+
+.overlay h1 {
+    font-size: 3rem; /* 텍스트 크기 */
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 50;
+    font-style: italic;
+    font-family: 'Roboto' sans-serif;
+}
+
+.card:hover .overlay {
+    opacity: 1; /* 호버 시 나타남 */
 }
 
 .wrapper {
@@ -57,31 +76,33 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .container {
-    height: 600px;
-    width: 800px;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    z-index: 1;
 }
 
 
 .card {
-    width: 80px;
-    border-radius: .75rem;
+    flex: 1;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
     background-size: cover;
     cursor: pointer;
     overflow: hidden;
-    border-radius: 2rem;
-    margin: 0 10px;
     display: flex;
-    align-items: flex-end;
-    transition: .6s cubic-bezier(.28, -0,03, 0, .99);
-    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
-    transition: 0.5s;
-    box-shadow: 0 0 15px #fff;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 0.5s ease;
 }
 
 .card > .row {
@@ -107,7 +128,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     height: 80px;
-    width: 520px;
+    width: 100%;
     opacity: 0;
     transform: translateY(30px);
     transform: all .2s ease;
@@ -132,7 +153,7 @@ input {
 }
 
 input:checked + label {
-    width: 600px;
+    width: 100%;
 }
 
 input:checked + label .description {
@@ -141,21 +162,22 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-    background-image: url(img/santa.jpg);
+    background-image: url(img/1.PNG);
 }
 
 .card[for="c2"] {
-    background-image: url(img/nectarine.png);
+    background-image: url(img/2.PNG);
 }
 
 .card[for="c3"] {
-    background-image: url(img/petit.png);
+    background-image: url(img/3.jpg);
 }
 
 .card[for="c4"] {
-    background-image: url(img/rosiee.jpeg);
+    background-image: url(img/4.jpeg);
 }
 
 .card:hover{
-    transform: translateY(+10px)
+    transform: translateX(0px);
+    z-index: 5;
 }
