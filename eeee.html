@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleeee.css">
+    <title>Emotions</title>
+</head>
+
+<body>
+    <nav>
+        <img src="img/logo.png" class="logo">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="seasonal.html">SEASONAL</a></li>
+            <li><a href="copy.html">MEMORIES</a></li>
+            <li><a href="emotions.html">EMOTIONS</a></li>
+            <li><a href="quotes.html">QUOTES</a></li>
+        </ul>
+    </nav>
+</body>
+
+<body>
+    <div class="icon-container">
+        <div class="icon" onclick="showPopup('Joy',
+        'Citrus scents like orange and lemon are refreshing and enlift the spirit. They work perfectly to brighten up a gloomy day, offering an instant mood boost with their uplifting aroma. Zestiness of these scents is energizing, reminding of sunny days and fresh beginnings.')">
+            <img src="img/01.gif" alt="Icon 1" class="icon-img">
+            <span class="icon-text">Joy</span>
+        </div>
+        <div class="icon" onclick="showPopup('Sadness',
+        'Soft and gentle fragrances, such as vanilla or delicate floral notes, as well as the warm scent of wood can help alleviate sadness and provide a sense of solace.')">
+            <img src="img/02.gif" alt="Icon 2" class="icon-img">
+            <span class="icon-text">Sadness</span>
+        </div>
+        <div class="icon" onclick="showPopup('Loneliness',
+        'Earthy smells like wet wood or moss, the crispness of cold winter air at dawn, or the deep, smoky scent of leather brings a sense of solitude.')">
+            <img src="img/03.gif" alt="Icon 3" class="icon-img">
+            <span class="icon-text">Loneliness</span>
+        </div>
+        <div class="icon" onclick="showPopup('Calmness',
+        'Herbaceous scents like lavender and chamomile, or the pure smell of fresh laundered linen sheets create a sense of tranquility.')">
+            <img src="img/04.gif" alt="Icon 4" class="icon-img">
+            <span class="icon-text">Calmness</span>
+        </div>
+        <div class="icon" onclick="showPopup('Excitement',
+        'Bold, refreshing scents like mint and eucalyptus, evoke a sense of excitement.')">
+            <img src="img/05.gif" alt="Icon 5" class="icon-img">
+            <span class="icon-text">Excitement</span>
+        </div>
+        <div class="icon" onclick="showPopup('Passion',
+        'Captured in spicy scents such as cinnamon, ginger, and anise, along with strong floral fragrances like rose and jasmine. Rich, complex fruity notes, reminiscent of wine, also stir up this emotion.')">
+            <img src="img/06.gif" alt="Icon 6" class="icon-img">
+            <span class="icon-text">Passion</span>
+        </div>
+    </div>
+
+    <!-- 팝업 설명 -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">×</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-description"></p>
+        </div>
+    </div>
+
+    <a href="emotionss.html">
+        <button class="bottom-btn">Try Star Rate Recommendator</button>
+      </a>
+
+    <script src="eeee.js"></script>
+</body>
+</html>
