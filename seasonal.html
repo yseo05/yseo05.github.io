@@ -46,7 +46,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #000000;
+            color: #ffffff;
             font-size: 18px;
         }
 
@@ -78,7 +78,7 @@
         }
 
         .card:hover {
-            flex: 1.5; /* 호버 시 카드가 확대 */
+            flex: 1.2;
         }
 
         .card .overlay {
@@ -107,29 +107,6 @@
             font-weight: 200;
         }
 
-        .description-panel {
-            flex-basis: 25%;
-            height: 100%;
-            background-color: #ffffff;
-            color: #000000;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-
-        .description-panel h2 {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .description-panel p {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
         .card:nth-child(1) {
             background-image: url('img/1.PNG');
         }
@@ -147,6 +124,7 @@
         }
     </style>
 </head>
+
 <body>
     <nav>
         <img src="img/logo.png" class="logo">
@@ -181,39 +159,28 @@
                     <h1>Winter</h1>
                 </div>
             </div>
-            <div class="description-panel" id="descriptionPanel">
-                <h2 id="seasonTitle">Spring</h2>
-                <p id="seasonDescription">Spring is a season of new beginnings and blooming flowers. It's the time when nature awakens.</p>
-            </div>
         </div>
     </div>
 
     <script>
         // 카드 클릭 이벤트
         const cards = document.querySelectorAll('.card');
-        const descriptionPanel = document.getElementById('descriptionPanel');
-        const seasonTitle = document.getElementById('seasonTitle');
-        const seasonDescription = document.getElementById('seasonDescription');
-
-        const descriptions = {
-            Spring: "Spring is a season of new beginnings and blooming flowers. It's the time when nature awakens.",
-            Summer: "Summer brings warmth and sunshine, perfect for enjoying beaches and outdoor activities.",
-            Fall: "Fall is known for its colorful leaves and cozy vibes, a time of harvest and reflection.",
-            Winter: "Winter is the season of snow and festivities, where warmth comes from within.",
-        };
-
-        // 초기값 설정
-        document.addEventListener('DOMContentLoaded', () => {
-            const defaultSeason = "Spring";
-            seasonTitle.textContent = defaultSeason;
-            seasonDescription.textContent = descriptions[defaultSeason];
-        });
 
         cards.forEach(card => {
             card.addEventListener('click', () => {
                 const season = card.getAttribute('data-season');
-                seasonTitle.textContent = season;
-                seasonDescription.textContent = descriptions[season];
+
+                // 페이지 이동 링크 설정
+                const links = {
+                    Spring: "spring.html",
+                    Summer: "summer.html",
+                    Fall: "fall.html",
+                    Winter: "winter.html",
+                };
+
+                // 리다이렉션 실행
+                const link = links[season] || "#"; // 지정되지 않은 경우 기본값은 '#'
+                window.location.href = link;
             });
         });
     </script>
