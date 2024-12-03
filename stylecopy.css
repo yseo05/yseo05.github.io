@@ -14,6 +14,12 @@ body {
     overflow-x: hidden;
 }
 
+.logo {
+    position: absolute;
+    align-items: center;
+    left: 10%;
+}
+
 nav {
     width: 100%;
     position: absolute;
@@ -61,7 +67,7 @@ nav ul li a {
 
 .title-container h1 {
     font-family: "Prata", system-ui;
-    font-size: 100px;
+    font-size: 50px;
     position: relative;
     color: black;
     z-index: 50;
@@ -73,93 +79,63 @@ h4 {
 
 .background-fade {
     position: fixed;
-    display: inline-block;
-    text-decoration: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    animation: fadeInAnimation 1.5s forwards;
+    top: 40%; /* 화면의 적당한 위치 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* 이미지 크기 */
+    height: auto; /* 이미지 비율 유지 */
+    animation: fadeInAnimation 1s forwards;
+    z-index: 10; /* 다른 콘텐츠 위에 표시되도록 */
+}
+
+.background-fade img {
+    width: 40%; /* 이미지 크기 조정 */
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
-}
-
-.logo {
-    position: absolute;
-    align-items: center;
-    left: 10%;
-}
-
-#asterisk {
-    display: block;
-    position: fixed;
-    align-items:center;
-    width: 12%;
-    animation: spin 10s linear infinite;
-    top: 15%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    transform-origin: center;
-    z-index: 10;
-    cursor: pointer;
-
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-#asterisk:hover {
-    transform: rotate(360deg);
-    transition: transform 0.3s ease-in-out;
 }
 
 /* gallery */
 #pop-1 {
     display: block;
     position: relative;
-    width: 20%;
-    top: 50px;
-    left: 50px;
-    animation: reveal 7s forwards;
+    width: 25%;
+    top: 0px;
+    left: 0px;
+    animation: reveal 4s forwards;
     opacity: 0;
-    animation-delay: 1s;
+    animation-delay: 0.2s;
 }
 
 #pop-2 {
     display: block;
     position: relative;
-    width: 10%;
-    top: 80px;
-    left: 1000px;
+    width: 20%;
+    top: -40px;
+    left: 200px;
     animation: reveal 4s forwards;
     opacity: 0;
-    animation-delay: 2s;
+    animation-delay: 0.6s;
 }
 
 #pop-3 {
     display: block;
     position: relative;
-    width: 10%;
-    top: 55px;
+    width: 20%;
+    top: -600px;
     left: 320px;
-    animation: reveal 6s forwards;
+    animation: reveal 4s forwards;
     opacity: 0;
-    animation-delay: .5s;
+    animation-delay: 0.4s;
     z-index: 1;
 }
 
@@ -167,32 +143,31 @@ h4 {
     display: block;
     position: relative;
     width: 20%;
-    top: 130px;
-    left: 1000px;
-    animation: reveal 5s forwards;
+    top: -1000px;
+    left: 550px;
+    animation: reveal 4s forwards;
     opacity: 0;
-    animation-delay: .7s;
+    animation-delay: 0.8s;
     z-index: 1;
 }
 
 #pop-5 {
     display: block;
     position: relative;
-    width: 17%;
-    top: -350px;
-    left: 700px;
-    bottom: 100px;
-    animation: reveal 8s forwards;
+    width: 25%;
+    top: -800px;
+    left: 800px;
+    animation: reveal 4s forwards;
     opacity: 0;
-    animation-delay: .9s;
+    animation-delay: 0.25s;
 }
 
 #pop-6 {
     display: block;
     position: relative;
-    width: 22%;
+    width: 30%;
     top: -1050px;
-    left: 1060px;
+    left: 1200px;
     animation: reveal 4s forwards;
     z-index: -1;
     opacity: 0;
@@ -202,23 +177,23 @@ h4 {
 #pop-7 {
     display: block;
     position: relative;
-    width: 30%;
-    top: -1000px;
-    left: 100px;
-    animation: reveal 6s forwards;
+    width: 20%;
+    top: -1550px;
+    left: 150px;
+    animation: reveal 5s forwards;
     opacity: 0;
-    animation-delay: 1.8s;
+    animation-delay: 0.2s;
 }
 
 #pop-8 {
     display: block;
     position: relative;
-    width: 15%;
-    top: -1400px;
-    left: 600px;
-    animation: reveal 5s forwards;
+    width: 20%;
+    top: -1600px;
+    left: 480px;
+    animation: reveal 4s forwards;
     opacity: 0;
-    animation-delay: 3s;
+    animation-delay: 2s;
     z-index: 1;
 }
 
@@ -227,7 +202,7 @@ h4 {
     position: relative;
     width: 11.5%;
     top: -2300px;
-    left: 680px;
+    left: 400px;
     animation: reveal 4s forwards;
     opacity: 0;
     animation-delay: 1.2s;
@@ -236,9 +211,9 @@ h4 {
 #pop-10 {
     display: block;
     position: relative;
-    width: 20%;
-    top: -2400px;
-    left: 150px;
+    width: 25%;
+    top: -1800px;
+    left: 100px;
     animation: reveal 10s forwards;
     opacity: 0;
     animation-delay: 2s;
@@ -247,19 +222,21 @@ h4 {
 #pop-11 {
     display: block;
     position: relative;
+    width: 50%;
     top: -2000px;
-    left: 800px;
+    left: 880px;
     animation: reveal 5s forwards;
     opacity: 0;
-    animation-delay: 3s;
+    animation-delay: 2s;
+    z-index: -5;
 }
 
 #pop-12 {
     display: block;
     position: relative;
-    width: 15%;
-    top: -2500px;
-    left: 1150px;
+    width: 20%;
+    top: -2020px;
+    left: 1400px;
     animation: reveal 8s forwards;
     opacity: 0;
     animation-delay: 3;
@@ -270,17 +247,18 @@ h4 {
     display: block;
     position: relative;
     width: 18%;
-    top: -2400px;
+    top: -3200px;
+    left: 600px;
     animation: reveal 5s forwards;
     opacity: 0;
-    animation-delay: 4s;
+    animation-delay: 2s;
 }
 
 #pop-14 {
     display: block;
     position: relative;
-    width: 20%;
-    top: -2600px;
+    width: 25%;
+    top: -3000px;
     left: 690px;
     animation: reveal 6s forwards;
     opacity: 0;
@@ -292,20 +270,20 @@ h4 {
 #pop-15 {
     display: block;
     position: relative;
-    width: 10%;
-    top: -3100px;
-    left: 1080px;
+    width: 12%;
+    top: -3150px;
+    left: 1020px;
     animation: reveal 9s forwards;
     opacity: 0;
-    animation-delay: 5s;
+    animation-delay: 2s;
 }
 
 #pop-16 {
     display: block;
     position: relative;
     width: 18%;
-    top: -3100px;
-    left: 80px;
+    top: -3200px;
+    left: 50px;
     animation: reveal 6.5s forwards;
     opacity: 0;
     animation-delay: 2.5s;
@@ -314,34 +292,34 @@ h4 {
 #pop-17 {
     display: block;
     position: relative;
-    width: 17%;
-    top: -3100px;
-    left: 900px;
+    width: 25%;
+    top: -3250px;
+    left: 100px;
     animation: reveal 7s forwards;
     opacity: 0;
-    animation-delay: 3.5s;
+    animation-delay: 2s;
 }
 
 #pop-18 {
     display: block;
     position: relative;
-    width: 15%;
+    width:18%;
     top: -3800px;
     left: 270px;
     animation: reveal 4.5s forwards;
     opacity: 0;
-    animation-delay: 4s;
+    animation-delay: 2s;
 }
 
 #pop-19 {
     display: block;
     position: relative;
-    width: 11%;
-    top: -3870px;
-    left: 400px;
+    width: 15%;
+    top: -3700px;
+    left: 300px;
     animation: reveal 5s forwards;
     opacity: 0;
-    animation-delay: 4.3s;
+    animation-delay: 2s;
     z-index: 1;
 }
 
@@ -349,8 +327,8 @@ h4 {
     display: block;
     position: relative;
     width: 20%;
-    top: -4100px;
-    left: 1300px;
+    top: -4000px;
+    left: 1200px;
     animation: reveal 3.5s forwards;
     opacity: 0;
     animation-delay: 2.3s;
@@ -359,9 +337,9 @@ h4 {
 #pop-21 {
     display: block;
     position: relative;
-    width: 13%;
-    top: -4000px;
-    left: 130px;
+    width: 15%;
+    top: -4050px;
+    left: 250px;
     animation: reveal 3s forwards;
     opacity: 0;
     animation-delay: 5s;
