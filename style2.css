@@ -5,6 +5,10 @@
     font-family: "Prata", system-ui;
 }
 
+body {
+    background-color: rgb(240, 240, 228);
+}
+
 nav {
     width: 100%;
     position: absolute;
@@ -44,11 +48,12 @@ nav ul li a{
     --heart-color: rgb(0, 0, 0);
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--bg-color);
+    font-family: "Prata", system-ui;
+    background-color: rgb(240, 240, 228); /* 배경색을 이곳에서 설정 */
     display: flex;
     align-items: center;
     justify-content: center;
